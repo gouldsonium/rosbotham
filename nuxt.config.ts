@@ -46,7 +46,8 @@ export default defineNuxtConfig({
       ],
       meta: [
         { name:"msapplication-TileColor", content:"#00aba9"},
-        { name:"theme-color", content:"#ffffff" }
+        { name:"theme-color", content:"#ffffff" },
+        { name:"facebook-domain-verification", content: process.env.FACEBOOK_VERIFICATION_TOKEN}
       ]
     }
   },
