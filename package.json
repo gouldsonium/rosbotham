@@ -27,6 +27,7 @@
     "@headlessui/vue": "^1.7.14",
     "@heroicons/vue": "^2.0.18",
     "@storyblok/nuxt": "^5.5.2",
+    "nuxt3-meta-pixel": "^1.0.9",
     "playwright": "^1.37.1"
   }
 }

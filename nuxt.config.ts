@@ -8,9 +8,6 @@ export default defineNuxtConfig({
   site: {
     url: 'https://rosbothamfinance.com'
   },
-  plugins: [
-    {src: '~/plugins/facebook-pixel.js', mode: 'client'} // Add the path to your plugin file
-  ],
   modules: [
     '@nuxtjs/tailwindcss',
     ["@storyblok/nuxt", { 
@@ -19,6 +16,7 @@ export default defineNuxtConfig({
         region: "eu"
       } 
     }],
+    'nuxt3-meta-pixel',
     'nuxt-og-image',
     'nuxt-simple-robots',
     !!process.env.GTAG_ID ?
@@ -31,6 +29,13 @@ export default defineNuxtConfig({
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css'
+  },
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '896755728853427',
+    autoPageView: true,
+    disabled: false
   },
   css: ['assets/css/main.css'],
   devtools: { enabled: true },
