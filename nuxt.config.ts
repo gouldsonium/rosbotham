@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   site: {
     url: 'https://rosbothamfinance.com'
   },
+  plugins: [
+    {src: '~/plugins/facebook-pixel.js', mode: 'client'} // Add the path to your plugin file
+  ],
   modules: [
     '@nuxtjs/tailwindcss',
     ["@storyblok/nuxt", { 
