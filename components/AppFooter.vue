@@ -54,7 +54,7 @@
           <img src="~/assets/img/dash.png" class="my-2" alt="dash.png">
           <ul class="text-sm font-medium">
             <li v-for="item in contactUs" :key="item.text" class="my-3">
-              <NuxtLink :to="item.url" class="mr-4 cursor-pointer hover:underline md:mr-6">{{ item.text }}</NuxtLink>
+              <NuxtLink :to="item.url" class="mr-4 cursor-pointer hover:underline md:mr-6 break-words">{{ item.text }}</NuxtLink>
             </li>
           </ul>
         </div>
