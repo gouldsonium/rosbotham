@@ -5,7 +5,11 @@
 <template>
   <section class="out-box" v-editable="blok" :style="{backgroundColor: blok.background_color?.color}">
     <div class="shape-box relative">
-      <img class="h-full w-full object-cover absolute brightness-50" :src="blok.background_image?.filename">
+      <NuxtImg 
+        class="h-full w-full object-cover absolute brightness-50" 
+        :src="blok.background_image?.filename" provider="storyblok"
+        placeholder 
+      />
       <div class="image-box">
         <div class="grid grid-cols-1 lg:grid-cols-3 z-10 w-full py-6 px-5 min-h-full container py-48">
           <div class="text-white flex flex-col justify-center px-16 sm:px-24 lg:col-span-2" :class="blok.text_position">

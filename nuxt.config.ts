@@ -17,6 +17,7 @@ export default defineNuxtConfig({
       } 
     }],
     'nuxt3-meta-pixel',
+    '@nuxt/image',
     'nuxt-simple-robots',
     !!process.env.GTAG_ID ?
     ['nuxt-gtag', {
@@ -28,6 +29,13 @@ export default defineNuxtConfig({
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css'
+  },
+  image: {
+    storyblok: {
+      baseURL: 'https://a.storyblok.com'
+    },
+    dir: 'assets/img'
+
   },
   facebook: {
     /* module options */
