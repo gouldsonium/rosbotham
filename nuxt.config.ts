@@ -17,7 +17,6 @@ export default defineNuxtConfig({
       } 
     }],
     'nuxt3-meta-pixel',
-    'nuxt-og-image',
     'nuxt-simple-robots',
     !!process.env.GTAG_ID ?
     ['nuxt-gtag', {
