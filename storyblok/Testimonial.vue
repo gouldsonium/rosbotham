@@ -1,5 +1,7 @@
 <script setup>
   const props = defineProps({ blok: Object });
+  const resolvedRichText = computed(() => renderRichText(props.blok?.text));
+  console.log(props.blok.text)
 
   const isMobile = ref(false);
   const expanded = ref(false);
@@ -42,14 +44,12 @@
         alt="quatation"
       />
     </div>
-    <p
-      v-if="!!blok?.text"
+    <div
+      v-html="resolvedRichText"
       class="mt-5"
       :class="{ 'max-lines-1 text-truncate': isMobile && !expanded }"
       @click="toggleExpand"
-    >
-      {{ blok?.text }}
-    </p>
+    ></div>
     <p @click="toggleExpand" v-if="isMobile && !expanded" class="text-secondary underline cursor-pointer">READ MORE</p>
     <div class="mt-5">
       <h4 class="text-secondary text-xs sm:text-lg">
