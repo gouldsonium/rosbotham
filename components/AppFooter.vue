@@ -68,7 +68,7 @@
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
       <span class="block text-sm sm:text-center">
-        David Rosbotham is authorised by FINMA (36161) & FINOS (Finanzombudsstelle Schweiz), 
+        David Rosbotham is authorised by FINOS (Finanzombudsstelle Schweiz), 
         a legally recognised ombudsman pursuant to Art 81 para 1 of FinSA
       </span>
     </div>

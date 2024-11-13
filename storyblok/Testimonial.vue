@@ -1,7 +1,6 @@
 <script setup>
   const props = defineProps({ blok: Object });
   const resolvedRichText = computed(() => renderRichText(props.blok?.text));
-  console.log(props.blok.text)
 
   const isMobile = ref(false);
   const expanded = ref(false);
