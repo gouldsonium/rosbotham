@@ -68,8 +68,7 @@
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
       <span class="block text-sm sm:text-center">
-        David Rosbotham is authorised by FINOS (Finanzombudsstelle Schweiz), 
-        a legally recognised ombudsman pursuant to Art 81 para 1 of FinSA
+        David Rosbotham is published on the ARIF (Association Romande des Intermediaries Financiers) public register for regulated Financial Planners in Switzerland – number 17147 and further information is available upon request.
       </span>
     </div>
   </footer>
