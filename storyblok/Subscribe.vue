@@ -60,7 +60,7 @@ export default {
       if (process.client) {
         leadSource = localStorage.getItem('source');
       }
-      const API = process.env.NODE_ENV == 'development' ? 'http://localhost:3001' : 'https://k5hvbhv6pg.execute-api.eu-west-2.amazonaws.com/dev'
+      const API = process.env.NODE_ENV == 'development' ? 'http://localhost:3001' : 'https://ugilrn1h2k.execute-api.eu-west-2.amazonaws.com/dev'
       try {
         await axios.post(API + '/subscribe', {
           email: email.value,
@@ -74,6 +74,7 @@ export default {
 
       } catch (error) {
         console.error('Error submitting form:', error);
+        window.alert("Oops, something went wrong. Please email David via his email linked in the footer");
       }
     };
 
