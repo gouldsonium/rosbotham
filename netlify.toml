@@ -2,5 +2,5 @@
 command = "yarn build"
 publish = ".output/public"
 
-[[functions]]
+[functions]
 directory = ".output/server"
