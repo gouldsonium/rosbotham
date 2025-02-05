@@ -1,8 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  nitro: {
-    preset: process.env.STORYBLOK_VERSION === 'draft' ? 'node' : 'static',
-  },
   runtimeConfig: {
     public: {
       VERSION: process.env.STORYBLOK_VERSION
