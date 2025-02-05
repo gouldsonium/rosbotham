@@ -5,7 +5,7 @@ publish = ".output/public"
 [functions]
 directory = ".output/server"
 
-[redirects]
+[[redirects]]
 from = "/*"
 to = "/.netlify/functions/default"
 status = 200
