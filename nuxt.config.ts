@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true, // Auto-detect links
     },
-    preset: process.env.STORYBLOK_VERSION === 'draft' ? 'node-server' : 'static',
+    preset: process.env.STORYBLOK_VERSION === 'draft' ? 'isr' : 'static',
   },
   runtimeConfig: {
     public: {
