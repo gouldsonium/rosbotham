@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   nitro: {
-    preset: process.env.STORYBLOK_VERSION === 'draft' ? 'node' : 'static',
+    prerender: {
+      crawlLinks: true, // Auto-detect links
+    },
+    preset: process.env.STORYBLOK_VERSION === 'draft' ? 'node-server' : 'static',
   },
   runtimeConfig: {
     public: {
