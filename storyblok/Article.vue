@@ -11,9 +11,6 @@
       <h1 class="text-secondary font-bold mb-4 uppercase" :style="{ color: blok.headline_teaser_color?.color }">
         {{ blok.title }}
       </h1>
-      <!-- <h2 class="text-gray-900 font-semibold mb-4" :style="{ color: blok.headline_teaser_color?.color }">
-        {{ blok.teaser }}
-      </h2> -->
       <div v-html="resolvedRichText" class="prose max-w-none" :class="{'prose-invert text-white': blok.invert}"></div>
     </div>
   </div>
@@ -36,7 +33,6 @@
     };
   });
 
-
-  useSeoMeta(() => metaData.value);  // Important: Use a function that returns the computed object
-  useServerSeoMeta(() => metaData.value); // Important: Use a function that returns the computed object
+  useSeoMeta(metaData.value);  // Important: Use a function that returns the computed object
+  useServerSeoMeta(metaData.value); // Important: Use a function that returns the computed object
 </script>
