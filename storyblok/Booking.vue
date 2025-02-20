@@ -23,11 +23,13 @@ const areasOfInterest = [
   "Repatriation_planning",
   "Wills",
   "Pension_insurance",
-  "Insurance",
   "Tax"
 ];
 
 const createLabel = (area) => {
+  if(area == 'Pension_insurance'){
+    return 'Pension planning';
+  }
   const arr = area.split('_')
   return arr.join(' ')
 }
