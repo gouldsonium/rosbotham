@@ -24,12 +24,12 @@
   useHead({
     title: 'Rosbotham Finance: ' + props.blok?.title,
     meta: [
-      { name: 'og:title', content: 'Rosbotham Finance: ' + props.blok?.title},
-      { name: 'description', content: props.blok?.teaser},
-      { name: 'og:description', content: props.blok?.teaser},
-      { name: 'og:image', content: image},
-      { name: 'og:image:width', content: "1200"},
-      { name: 'og:image:height', content: "630"},
+      { property: 'og:title', content: 'Rosbotham Finance: ' + props.blok?.title},
+      { property: 'description', content: props.blok?.teaser},
+      { property: 'og:description', content: props.blok?.teaser},
+      { property: 'og:image', content: image},
+      { property: 'og:image:width', content: "1200"},
+      { property: 'og:image:height', content: "630"},
     ]
   });
 </script>
