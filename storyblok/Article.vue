@@ -19,20 +19,17 @@
 <script setup>
   const props = defineProps({ blok: Object });
   const resolvedRichText = computed(() => renderRichText(props.blok.content));
+  const image = props.blok.image?.filename;
 
-  const metaData = computed(() => {
-    const image = props.blok.image?.filename;
-    return {
-      title: 'Rosbotham Finance: ' + props.blok.title,
-      ogTitle: 'Rosbotham Finance: ' + props.blok.title,
-      description: props.blok.teaser,
-      ogDescription: props.blok.teaser,
-      ogImage: image, // Use the potentially resolved image
-      ogImageWidth: 1200,
-      ogImageHeight: 630,
-    };
+  useHead({
+    title: 'Rosbotham Finance: ' + props.blok?.title,
+    meta: [
+      { name: 'og:title', content: 'Rosbotham Finance: ' + props.blok?.title},
+      { name: 'description', content: props.blok?.teaser},
+      { name: 'og:description', content: props.blok?.teaser},
+      { name: 'og:image', content: image},
+      { name: 'og:image:width', content: "1200"},
+      { name: 'og:image:height', content: "630"},
+    ]
   });
-
-  useSeoMeta(metaData.value);  // Important: Use a function that returns the computed object
-  useServerSeoMeta(metaData.value); // Important: Use a function that returns the computed object
 </script>
