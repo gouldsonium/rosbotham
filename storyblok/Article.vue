@@ -21,36 +21,15 @@
   const resolvedRichText = computed(() => renderRichText(props.blok.content));
   const image = props.blok.image?.filename;
 
-  const metaData = computed(() => {
-    const image = props.blok?.image?.filename ? 'https://a.storyblok.com' + props.blok.image.filename + '/m/1200x630' : null;
-    return {
-      title: 'Rosbotham Finance: ' + props.blok?.title,
-      ogTitle: 'Rosbotham Finance: ' + props.blok?.title, // Important: og:title
-      description: props.blok?.teaser,
-      ogDescription: props.blok?.teaser, // Important: og:description
-      ogImage: image, // Important: og:image (full URL)
-      ogImageWidth: 1200, // Important: og:image:width
-      ogImageHeight: 630, // Important: og:image:height
-    };
+  useHead({
+    title: 'Rosbotham Finance: ' + props.blok?.title,
+    meta: [
+      { name: 'og:title', content: 'Rosbotham Finance: ' + props.blok?.title},
+      { name: 'description', content: props.blok?.teaser},
+      { name: 'og:description', content: props.blok?.teaser},
+      { name: 'og:image', content: image},
+      { name: 'og:image:width', content: "1200"},
+      { name: 'og:image:height', content: "630"},
+    ]
   });
-
-  watch(
-    () => props.blok,
-    (newBlok) => {
-      if (newBlok) { // Only update if blok is defined
-        useHead({
-          title: metaData.value.title, // Use the values from metaData
-          meta: [
-            { name: 'og:title', content: metaData.value.ogTitle },
-            { name: 'description', content: metaData.value.description },
-            { name: 'og:description', content: metaData.value.ogDescription },
-            { name: 'og:image', content: metaData.value.ogImage },
-            { name: 'og:image:width', content: metaData.value.ogImageWidth },
-            { name: 'og:image:height', content: metaData.value.ogImageHeight },
-          ],
-        });
-      }
-    },
-    { immediate: true } // Call initially and whenever props.blok changes
-  );
 </script>
