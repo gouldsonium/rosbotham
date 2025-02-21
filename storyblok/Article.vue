@@ -21,27 +21,15 @@
   const resolvedRichText = computed(() => renderRichText(props.blok.content));
   const image = props.blok.image?.filename;
 
-  // useHead({
-  //   title: 'Rosbotham Finance: ' + props.blok?.title,
-  //   meta: [
-  //     { name: 'og:title', content: 'Rosbotham Finance: ' + props.blok?.title},
-  //     { name: 'description', content: props.blok?.teaser},
-  //     { name: 'og:description', content: props.blok?.teaser},
-  //     { name: 'og:image', content: image},
-  //     { name: 'og:image:width', content: "1200"},
-  //     { name: 'og:image:height', content: "630"},
-  //   ]
-  // });
-
   useHead({
-    title: 'Test Title',
+    title: 'Rosbotham Finance: ' + props.blok?.title,
     meta: [
-      { name: 'og:title', content: 'Test OG Title' },
-      { name: 'description', content: 'Test Description' },
-      { name: 'og:description', content: 'Test OG Description' },
-      { name: 'og:image', content: 'https://a.storyblok.com/f/247081/1366x768/8cbd455e52/lucerne.jpg' }, // Use the *exact* URL
-      { name: 'og:image:width', content: '1200' },
-      { name: 'og:image:height', content: '630' },
-    ],
+      { name: 'og:title', content: 'Rosbotham Finance: ' + props.blok?.title},
+      { name: 'description', content: props.blok?.teaser},
+      { name: 'og:description', content: props.blok?.teaser},
+      { name: 'og:image', content: image},
+      { name: 'og:image:width', content: "1200"},
+      { name: 'og:image:height', content: "630"},
+    ]
   });
 </script>
